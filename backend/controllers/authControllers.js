@@ -1,4 +1,5 @@
 const emailValidation = require("../helpers/emailValidation");
+const { sendEmail } = require("../helpers/sendEmail");
 const userModel = require("../models/userModel");
 const bcrypt = require("bcrypt");
 
@@ -15,6 +16,7 @@ const signupController = async (req, res) => {
     if(!emailValidation(email)){
         return res.status(400).json({success: false,message: "Invalid email format" });
         }
+        
          let user = new userModel({
         username,
         email,
@@ -22,6 +24,7 @@ const signupController = async (req, res) => {
         phone
      })
      await user.save();
+     sendEmail(email,"1234");
      return res.status(201).json({ success: true,message: "User created successfully", data: user });
      }
     })

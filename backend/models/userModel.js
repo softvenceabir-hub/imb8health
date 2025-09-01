@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema(
   {
+    
     username: {
       type: String,
       required: [true, "Username is required"],
@@ -45,13 +46,13 @@ const userSchema = new mongoose.Schema(
       enum: ["user", "admin"],
       default: "user",
     },
-    // otp: {
-    //   type: String,
-    // },
-    // isVerify: {
-    //   type: Boolean,
-    //   default: false,
-    // },
+    otp: {
+      type: String,
+    },
+    isVerify: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
