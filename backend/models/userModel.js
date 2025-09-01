@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Password is required"],
       minlength: [6, "Password must be at least 6 characters long"],
-      maxlength: [25, "Password must be at most 25 characters long"],
+      // maxlength: [25, "Password must be at most 25 characters long"],
       trim: true,
     },
     profilePicture: {
@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema(
       unique: [true, "Phone number must be unique"],
       trim: true,
       minlength: [11, "Phone number must be at least 11 characters long"],
-      match: [/^\d{11}$/, "Phone number must be exactly 11 digits long"],
+    
     },
     role: {
       type: String,
