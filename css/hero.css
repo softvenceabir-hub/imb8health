@@ -1,0 +1,6 @@
+   .heheropart {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      background-color: aquamarine;
+    }
