@@ -154,10 +154,13 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML += `
         <div class="card-supplement">
       <img src="${card.img}" alt="${card.title}">
-      <h2>Hello ffffddfdfdfdfdf</h2>
+    <div class="card-content">
+            <h3>${card.title}</h3>
+            <p>${card.desc}</p>
+          </div>
         
         </div>
       `;
     });
-   
+      
        
